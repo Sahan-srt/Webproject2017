@@ -1,0 +1,33 @@
+.middle{
+
+min-height:1080px;
+width:95vw; 
+padding-left:5%; 
+
+}
+#contentofadmin{
+display: -webkit-box;
+-webkit-box-orient:horizontal;
+
+
+
+}
+#pending_news{
+	
+-webkit-box-flex:1;
+width:50%; 
+
+
+}
+#pending_registrations{
+min-width:400px;
+
+}
+.inputform{
+	margin-top:10%; 
+	margin-left:10%;
+	margin-right:10%; 
+	padding:2%; 
+	border:5px solid gray; 
+	max-width:600px;
+}
