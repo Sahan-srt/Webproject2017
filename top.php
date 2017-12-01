@@ -38,15 +38,35 @@ include "database.php";
       </li>
     
 
-     <li class="nav-item">
-       <div class="btn-group">
-  <button type="button" class="btn btn-danger"><? 
+     
+      <? 
 
   if(isset($_SESSION['id'])) {
-    echo $_SESSION['id'];
+
+    if ($_SESSION['id']=="W.M.S.R.Thathsara") {
+      
+      echo "<a href='Admin.php'>".$_SESSION['id']."</a>";
+
+    }else{
+
+      echo "<a href='profile.php'>".$_SESSION['id']."</a>";
+
+
+    }
+     
+     echo "<a href='logout.php'>"."logout"."</a>";
+
+
+
+
+
   }else{
 
-    echo "Login please";
+echo "<a href='login.php'>"."Login"."</a>";
+
+echo "<a href='register.php'>"."register"."</a>";
+
+
   }
 
 
@@ -54,44 +74,12 @@ include "database.php";
     
 
 
-  </button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu"> <? 
-  //button status change here
 
-  if(isset($_SESSION['id'])){ 
-
-
-    if ($_SESSION['id']=="W.M.S.R.Thathsara") {
-   echo "<a id='admin' class='dropdown-item' href='Admin.php'>Admin Panel</a>";
-    }else{
-
- echo "<a class='dropdown-item' href='profile.php'>Profile</a>";
-
-    }
-
-    
-   
-    echo "  <div class='dropdown-divider'></div>
-    <a class='dropdown-item' href='logout.php'>LOG OUT</a>";
-
-}else{
-
-echo "<a id='login' class='dropdown-item' href='login.php'>Login</a>";
-echo "<a id='regi' class='dropdown-item' href='register.php'>Register</a>";
-
-
-} 
-
-
-?>
     
     
   
-  </div>
-</div>
+ 
+
 
       </li>
       

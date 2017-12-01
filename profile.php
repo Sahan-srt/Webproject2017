@@ -111,7 +111,7 @@ if (!isset($_SESSION['id'])) {
 
 
 
-
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBylzrdmPVU8tXBchM3DYhuw6RwUNaSyG8&libraries=places&callback=placesearch"></script>
 
 
 

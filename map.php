@@ -8,51 +8,63 @@
     </style>
 <!-- developer.google.com code refereced to this activity -->
  <div id="map"></div>
-    <script>
 
-       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom:14,
-          center: {lat:6.927079, lng:79.861244}
-        });
-        var geocoder = new google.maps.Geocoder();
+<script type="text/javascript">
 
-        document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
+     var geocoder;
+  var map;
+
+
+ 
+  function createmap() {
+
+
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(6.927079,79.861244);
+    var mapOptions = {
+      zoom:12,
+      center: latlng
+    }
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+
+<?               
+          $getlocation="SELECT * FROM ApprovedReport";
+          $setloc=mysqli_query($connect,$getlocation);
+          $count=mysqli_num_rows($setloc);
+          $newarray=array();
+          $x=0;
+          while($array=mysqli_fetch_assoc($setloc)){
+
+
+//geocoding the address,referanced js map api from developer.google.com
+    echo "var address ="."'".$array['Location']."'".";
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
         });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
       }
+    });";
 
-      function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location
-            });
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
-        });
-      }
+
+     }?>
 
 
 
 
+}
 
-      
 
-        
-    </script>
+   </script> 
+
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBylzrdmPVU8tXBchM3DYhuw6RwUNaSyG8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9TxZ7rc4_aDMwr0FyRMTMGulFVevWqOg&callback=createmap">
     </script>
-
-
-
-
-
 <?include "footer.php";?>
 
 <!-- 
