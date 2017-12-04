@@ -31,3 +31,98 @@ min-width:400px;
 	border:5px solid gray; 
 	max-width:600px;
 }
+#adminwrap{
+
+display: -webkit-box;
+-webkit-box-orient:vertical;
+min-height:100vh;
+
+}
+
+#midwrap{
+
+border:solid black 3px;
+display: -webkit-box;
+-webkit-box-orient:horizontal;
+ min-height:95vh; 
+}
+#right{
+-webkit-box-flex:1;
+float: right; 
+ overflow-x:auto;
+
+
+}
+
+#left{
+width:70vw; 
+
+
+}
+#ppcard{
+max-width:250px; 
+overflow-x:hidden; 
+}
+#body1{
+
+	display:inline-block;
+}
+#postcard{
+	display:block; 
+	max-width:700px; 
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+  border:3px solid black;
+}
+#buttonlink{
+padding-right:30px; 
+display:inline-flex; 
+text-align:center; 
+
+}
+
+#b1 a p {display: none;}
+#b2 a p {display: none;}
+#b1 a:hover p {display:block;}
+#b2 a:hover p {display:block;}
+#b1 a{text-decoration: none;}
+#b2 a{text-decoration: none;}
+
+#rightlist{
+
+	padding-left:60%; 
+}
+#navpp{
+	min-height:40px; 
+	max-width:50px;
+	max-height:50px;  
+}
+.star{
+
+	max-width:20px;
+	max-height:20px; 
+	border-radius:10px;  
+}
+.color{
+
+	background-color:red; 
+	border-radius:10px; 
+}
+#logo{
+
+	max-width:80px;
+	max-height:80px;  
+}
+#homewrap{
+
+background-color:#7E8F7C; 
+display: grid;
+
+}
+

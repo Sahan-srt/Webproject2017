@@ -1,5 +1,5 @@
  <?php
-
+include "connect.php";
 include "database.php";
 
 
@@ -19,34 +19,86 @@ include "database.php";
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-	  <a class="navbar-brand" href="#">DISASTER AWAREESS 2017</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="leftlist">
+  <img id="logo" src="images/icons/weblogo.png">
+	  <a class="navbar-brand" href="Home.php">DISASTER AWAREESS 2017</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navitop" aria-controls="navitop" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
   <div class="collapse navbar-collapse" id="navitop">
+    
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+     
+      <li class="nav-item active spacelistitm">
         <a class="nav-link" href="Home.php">Home <span class="sr-only">(current)</span></a>
       </li>
-       <li class="nav-item">
+
+       <li class="nav-item spacelistitm">
         <a class="nav-link disabled" href="map.php">Map View</a>
 
       </li>
     
+</ul>
+       
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="rightlist">
+       
+      <? 
 
-     <li class="nav-item">
-       <div class="btn-group">
-  <button type="button" class="btn btn-danger"><? 
+  if(isset($_SESSION['name'])) {
 
-  if(isset($_SESSION['id'])) {
-    echo $_SESSION['id'];
+    if ($_SESSION['name']=="W.M.S.R.Thathsara") {
+      
+    
+      echo' <li class="nav-item spacelistitm">
+
+
+        <a class="nav-link disabled" href="Admin.php">'.$_SESSION['name'].'</a>
+
+      </li>';
+
+    }else{
+
+   echo' <li class="nav-item "><a class="nav-link disabled" href="profile.php">
+        <img id="navpp" class="card-img-top" src="images/profile/'. $_SESSION['id'].'"'.'>
+
+         </a>
+
+
+      </li>';
+
+        echo' <li class="nav-item spacelistitm">
+        
+
+        <a class="nav-link disabled" href="profile.php">'.$_SESSION['name'].'</a>
+
+      </li>';
+
+    }
+     
+    
+  echo' <li class="nav-item spacelistitm" id="logout">
+        <a class="nav-link disabled" href="logout.php">'.'logout'.'</a>
+
+      </li>';
+
+
+
+
   }else{
 
-    echo "Login please";
+
+      echo' <li class="nav-item spacelistitm">
+        <a class="nav-link disabled" href="login.php">'."Login".'</a>
+
+      </li>';
+
+    echo' <li class="nav-item spacelistitm">
+        <a class="nav-link disabled" href="register.php">'."Register".'</a>
+
+      </li>';
+
   }
 
 
@@ -54,46 +106,13 @@ include "database.php";
     
 
 
-  </button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu"> <? 
-  //button status change here
-
-  if(isset($_SESSION['id'])){ 
-
-
-    if ($_SESSION['id']=="W.M.S.R.Thathsara") {
-   echo "<a id='admin' class='dropdown-item' href='Admin.php'>Admin Panel</a>";
-    }else{
-
- echo "<a class='dropdown-item' href='profile.php'>Profile</a>";
-
-    }
-
-    
-   
-    echo "  <div class='dropdown-divider'></div>
-    <a class='dropdown-item' href='logout.php'>LOG OUT</a>";
-
-}else{
-
-echo "<a id='login' class='dropdown-item' href='login.php'>Login</a>";
-echo "<a id='regi' class='dropdown-item' href='register.php'>Register</a>";
-
-
-} 
-
-
-?>
     
     
   
-  </div>
-</div>
+ 
 
-      </li>
+
+      
       
     </ul>
    

@@ -1,15 +1,8 @@
 <?php 
-	session_start();
 
-$error_name=$error_username=$error_password=$error_email=$error_job=$error_NIC=$error_eid='';
-
-$connect=mysqli_connect("localhost","root","");
-if (!$connect) {
-	echo "Connection error";
-}
-$data_select= mysqli_select_db($connect,'webproject2017');
-
-
+	
+session_start();
+$error='';
 //login 
 
 if (isset($_POST['login'])) {
@@ -26,7 +19,8 @@ if (isset($_POST['login'])) {
 
 
 			if ($count1==1) {
-				$_SESSION['id']=$array['FullName'];
+				$_SESSION['id']=$array['NIC'];
+				$_SESSION['name']=$array['FullName'];
 			
 
 				header("Location:Home.php");
@@ -142,19 +136,29 @@ $idregistration=$_POST['NIC'];
 // pending post adjustment 
 
 
-if (isset($_POST['reportaccept'])) {
+if (isset($_POST['reportaccept']) and !empty($_POST['rating'])) {
 	
 				  $report=$_POST['RID'];
-
+				  $rate=$_POST['rating'];
 
 			
-				$acceptpost="INSERT INTO `ApprovedReport`(SELECT*FROM PendingReport WHERE RID='$report')";
-				$connect->query($acceptpost);
+				$acceptpost="INSERT INTO `ApprovedReport`(`RID`,`ReporterID`,`Type`,`Description`,`Topic`,`Location`)(SELECT*FROM PendingReport WHERE RID='$report')";
+				 $connect->query($acceptpost);
+
+				$setrate="UPDATE`ApprovedReport` SET Rating='$rate'  WHERE RID='$report' ";
+
+				$connect->query($setrate);
+				
+				
+
 				$delete="DELETE FROM `PendingReport` WHERE RID='$report'";
 
 			$connect->query($delete);
 
 
+			}else{
+
+				 $error="please set threat level";
 			}
 
 
@@ -167,5 +171,78 @@ $report=$_POST['RID'];
 				$connect->query($delete);
 
 }
+
+//Homepage post delete by admin
+
+
+if (isset($_POST['homepostdelete'])) {
+	
+	$report=$_POST['RID'];
+
+	$delete="DELETE FROM `ApprovedReport` WHERE RID='$report'";
+	$connect->query($delete);
+
+
+}
+
+
+
+//uploading profile photo
+
+if (isset($_POST['upload'])) {
+	
+		$photoname=$_SESSION['id'];
+
+		$save="images/profile/";
+		$filename=$_FILES['select']['name'];
+		if (file_exists($save.$filename)) {
+
+			
+			
+		}else{
+
+			move_uploaded_file($_FILES['select']['tmp_name'],$save.$photoname);
+			
+			header("Location:profile.php");
+
+
+		}
+
+
+
+
+
+}
+
+//admin edit functionality
+
+if (isset($_POST['done'])) {
+     echo $report=$_POST['RID'];
+				echo  $rate=$_POST['rating'];
+
+$setrate="UPDATE`ApprovedReport` SET Rating='$rate'  WHERE RID='$report' ";
+
+				$connect->query($setrate);
+
+				header("Location:Home.php");
+
+
+}
+
+//admin user remove
+if (isset($_POST['removeuser'])) {
+	
+
+$user=$_POST['NIC'];
+
+	$delete="DELETE FROM `ApprovedRegistration` WHERE NIC='$user'";
+	$connect->query($delete);
+
+
+
+}
+
+
+
 
 ?>

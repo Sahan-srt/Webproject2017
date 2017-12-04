@@ -1,7 +1,25 @@
-<?include "top.php";?>
+<?include "top.php";
 
-<body><div  class="container-fluid">
+if (!isset($_SESSION['id'])) {
+	header("Location:login.php");
+}
 
+?>
+
+<body>
+
+	<div  class="container-fluid" id="adminwrap">
+		<div id="buttonlink">
+			<div id="b1">
+			<a  href="submitPost.php"><button  type="button" class="btn btn-primary btn-circle btn-lg" >P</button>
+				<p>Post news</p>
+			</a>
+		</div><div id="b2">
+				<a  href="userpanel.php"><button  type="button" class="btn btn-primary btn-circle btn-lg" >U</button>
+				<p>User details</p>
+			</a></div>
+		</div>
+		
 	<div class="row" id="contentofadmin">
 
 		<div id="pending_news">
@@ -51,9 +69,22 @@
 
 							<form method="POST" >
 								<input type="hidden" name='RID' value="<?echo $reportid;?>">
-							<button type="submit" class="btn btn-primary btn-sm" name="reportaccept">Accept
+								<label>Select Threat level</label>
+								<select name="rating" >
+								<option value=""></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+
+
+							</select>
+							<button type="submit" class="btn btn-primary btn-sm" name="reportaccept">Accept</button>
 							<button type="submit" class="btn btn-primary btn-sm" name="reportreject">Reject
-							<button type="submit" class="btn btn-primary btn-sm">Edit
+							<button type="submit" class="btn btn-primary btn-sm">Edit</button>
+							<span><?echo $error;?></span>
+
 							</form>
 
 

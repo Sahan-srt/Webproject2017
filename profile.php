@@ -9,85 +9,90 @@ if (!isset($_SESSION['id'])) {
 
 ?>
 
-
-
-
-<div class="middle" id="sub,itpost">
+<div id="midwrap" >
 	
+<div id="left" class="container">
+	<div class="col-sm"  >
+		<h5>Previously Updated news</h5>
 
-<table class="table table-secondary" >
+		<?php 
+			$reporter=$_SESSION['id'];
+		$selectReport="SELECT*FROM ApprovedReport WHERE ReporterID='$reporter' ";
+		$reportQuery=mysqli_query($connect,$selectReport);
+		while ($reportresults=mysqli_fetch_array($reportQuery)) {
+			
+		
 
-			<form method="POST"> <tbody >
+
+
+
+		 ?>
+	<table class="table table-secondary" >
+
+		<tbody>
 				<tr>
 				
 
 					<td>
 							<div class="card">
 							 <div class="card-header">
-							   <label for="inputTopic">Headline</label>
-							    <input type="text" class="form-control" id="inputHeadline" name="pheadline" placeholder="Enter Headline">
-							  </div>
-
+							    <?echo $reportresults['Topic'];?>
 							  </div>
 							  <div class="card-body">
-							    
-							    <div class="form-group">
-							    <label for="inputAddress">Reported by:</label>
-							    <input type="text" class="form-control" id="inputID" name="preporter" placeholder="Enter your NIC">
-							  </div>
+							    <h5 class="card-title">Reported by:<?echo $reportresults['ReporterID'];?></h5>
+							  <h5 class="card-title">Type:<?echo $reportresults['Type'];?></h5>
+							  <p><h4>Description</h4>
+							  	<?echo $reportresults['Description'];?>
+							
 
-							<label for="inputType">Type</label>
-							    <input type="text" class="form-control" id="inputType" name="ptype" placeholder="Disaster Type">
-							  </div>
-
-
-							 <label for="inputDescription">Description</label>
-							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea>
-							  </div>
-
-
-							  
 
 							  </p>
-							  <h5>Location:</h5>
-
-							   <input id="inputsearch" class="controls" type="text" placeholder="Select the location here:" name="plocation">
-
-							<script type="text/javascript">
-								
-								function placesearch(){
-
-
-									var input=document.getElementById('inputsearch');
-									var completeauto=new google.maps.places.Autocomplete(input);
-
-									}
-
-
-							</script>
+							  <h5>Location:<?echo $reportresults['Location'];?></h5>
+							 
+							  
+							  
 							    
 							  </div>
 							</div>
 
 
-						
-							<button type="submit" name="sendreport" class="btn btn-primary btn-sm">Send report</button><span><? echo $filldetails;?></span><span><? echo $sentdetails;?></span>
-							
+					
 
 
 					</td>
 
-
 				
 			</tr>
 		</tbody>
+		<? }?>
+
+	</table>
+
+	</div>
 
 
-	</table></form>
 
 
 
 
+</div>
+<div id="right" class="container">
+						
+							<div  id="ppcard" class="card" style="width: 20rem;">
+					  <img id="pp" class="card-img-top" src="images/profile/<?echo $_SESSION['id'];?>" alt="Card image cap">
+					 	<form method="POST" enctype="multipart/form-data">
+
+					  <div class="card-body">
+					    <h4 class="card-title"><?echo $_SESSION['name'];?></h4>
+					    <p class="card-text">some stuff</p>
+					    <input type="file" name="select">
+					    <button name="upload" class="btn btn-primary" type="submit">Upload a photo</button>
+					  </div>
+
+					  </form>
+					 
+						</div>
+						 <a href="submitPost.php">Submit post</a>
 
 
 
@@ -96,23 +101,7 @@ if (!isset($_SESSION['id'])) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 

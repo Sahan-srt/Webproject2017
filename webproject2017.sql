@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.2.11
+-- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2017 at 09:38 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Nov 25, 2017 at 07:38 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `webproject2017`
@@ -28,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ApprovedRegistration`
 --
 
-CREATE TABLE `ApprovedRegistration` (
+CREATE TABLE IF NOT EXISTS `ApprovedRegistration` (
   `NIC` varchar(10) NOT NULL,
   `FullName` varchar(100) NOT NULL,
   `Age` int(2) NOT NULL,
@@ -56,24 +54,23 @@ INSERT INTO `ApprovedRegistration` (`NIC`, `FullName`, `Age`, `Address`, `Email`
 -- Table structure for table `ApprovedReport`
 --
 
-CREATE TABLE `ApprovedReport` (
-  `RID` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ApprovedReport` (
+`RID` int(100) NOT NULL,
   `ReporterID` varchar(10) NOT NULL,
   `Type` varchar(50) NOT NULL,
   `Description` varchar(1000) NOT NULL,
   `Topic` varchar(100) NOT NULL,
-  `Location` varchar(150) NOT NULL,
-  `Rating` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Location` varchar(150) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ApprovedReport`
 --
 
-INSERT INTO `ApprovedReport` (`RID`, `ReporterID`, `Type`, `Description`, `Topic`, `Location`, `Rating`) VALUES
-(1, '458679812V', 'Fire', 'gini gatta', 'Fire at townhall', 'Town Hall, Colombo, Western Province, Sri Lanka', 4),
-(2, '950850450V', 'Floods', 'More floods', 'Flooding in Kottawa', 'Kottawa Town, Pannipitiya, Western Province, Sri Lanka', 5),
-(4, '458679812V', 'Gas leak', 'sdsds', 'Gas leak at Havilock City', 'Havelock City, Colombo, Western Province, Sri Lanka', 3);
+INSERT INTO `ApprovedReport` (`RID`, `ReporterID`, `Type`, `Description`, `Topic`, `Location`) VALUES
+(1, '950850450V', 'Fire', 'shop eka gini gatta', 'fire in a building ', 'Pitipana Junction Bus Stop, High Level Road, Homagama, Sri Lanka'),
+(2, '950850450V', 'Fire', 'Ginigatta yakooo', 'Fire at NSBM', 'NSBM Bus Stop, High Level Road, Nugegoda, Western Province, Sri Lanka'),
+(3, '950981865V', 'Car crash', 'Car eka happuna mahattayo', 'A car has gone crazy ', 'Pitipana Junction Bus Stop, Avissawella Road, Homagama, Western Province, Sri Lanka');
 
 -- --------------------------------------------------------
 
@@ -81,7 +78,7 @@ INSERT INTO `ApprovedReport` (`RID`, `ReporterID`, `Type`, `Description`, `Topic
 -- Table structure for table `PendingRegistration`
 --
 
-CREATE TABLE `PendingRegistration` (
+CREATE TABLE IF NOT EXISTS `PendingRegistration` (
   `NIC` varchar(10) NOT NULL,
   `FullName` varchar(100) NOT NULL,
   `Age` int(2) NOT NULL,
@@ -100,14 +97,14 @@ CREATE TABLE `PendingRegistration` (
 -- Table structure for table `PendingReport`
 --
 
-CREATE TABLE `PendingReport` (
-  `RID` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `PendingReport` (
+`RID` int(100) NOT NULL,
   `ReporterID` varchar(10) NOT NULL,
   `Type` varchar(50) NOT NULL,
   `Description` varchar(1000) NOT NULL,
   `Topic` varchar(100) NOT NULL,
   `Location` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -117,25 +114,25 @@ CREATE TABLE `PendingReport` (
 -- Indexes for table `ApprovedRegistration`
 --
 ALTER TABLE `ApprovedRegistration`
-  ADD PRIMARY KEY (`NIC`);
+ ADD PRIMARY KEY (`NIC`);
 
 --
 -- Indexes for table `ApprovedReport`
 --
 ALTER TABLE `ApprovedReport`
-  ADD PRIMARY KEY (`RID`);
+ ADD PRIMARY KEY (`RID`);
 
 --
 -- Indexes for table `PendingRegistration`
 --
 ALTER TABLE `PendingRegistration`
-  ADD PRIMARY KEY (`NIC`);
+ ADD PRIMARY KEY (`NIC`);
 
 --
 -- Indexes for table `PendingReport`
 --
 ALTER TABLE `PendingReport`
-  ADD PRIMARY KEY (`RID`);
+ ADD PRIMARY KEY (`RID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -145,13 +142,12 @@ ALTER TABLE `PendingReport`
 -- AUTO_INCREMENT for table `ApprovedReport`
 --
 ALTER TABLE `ApprovedReport`
-  MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `PendingReport`
 --
 ALTER TABLE `PendingReport`
-  MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
-
+MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
