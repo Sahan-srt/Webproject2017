@@ -1,4 +1,7 @@
- 		<?include "top.php";?>
+ 		<?include "top.php";
+
+
+    ?>
  		<div class="middle" id="sub,itpost">
 
 <div class="inputform">
@@ -38,20 +41,16 @@
      <input type="job" class="form-control"   placeholder="Job Title" name="jobtitle">
     
   </div><span><? echo $error_job ?></span>
-     <div class="form-group">
-  
-     <input type="jobid" class="form-control"   placeholder="Employee ID" name="jobid">
-    
-  </div><span><? echo $error_eid ?></span><br>
+     
 
   <div class="form-group">
   
      <input type="text" class="form-control"   placeholder="Address" name="address">
     
-  </div><span><?  ?></span><br>
+  </div><br>
      
 
-  <button type="submit" name="register" class="btn btn-primary">Signup</button>
+  <button type="submit" name="register" class="btn btn-primary">Signup</button><span><? echo $success;echo $goback; ?></span>
  
 </form>
 

@@ -36,8 +36,35 @@ include "database.php";
       </li>
 
        <li class="nav-item spacelistitm">
-        <a class="nav-link disabled" href="map.php">Map View</a>
+        <a class="nav-link " href="map.php">Map View</a>
 
+      </li>
+
+
+      <li class="nav-item disabled spacelistitm">
+        <div class="dropdown show ">
+
+  <a class="nav-link " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Information
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="opacity:0.7; 
+  background-color:#607D8B; 
+  
+  ">
+    <a class="dropdown-item" href="infor.php#Fire">Fire</a>
+    <a class="dropdown-item" href="infor.php#Floods">Floods</a>
+    <a class="dropdown-item" href="infor.php#Earthquark">Earthquark</a>
+    <a class="dropdown-item" href="infor.php#Vehicle_Accidents">Vehicle_Accidents</a>
+    <a class="dropdown-item" href="infor.php#Gas_leak">Gas_leak</a>
+    <a class="dropdown-item" href="infor.php#Other">Other</a>
+  </div>
+</div>
+</li>
+        
+      
+      <li class="nav-item  spacelistitm">
+        <a class="nav-link" href="contact.php">Contact us <span class="sr-only">(current)</span></a>
       </li>
     
 </ul>

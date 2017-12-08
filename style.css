@@ -67,10 +67,40 @@ overflow-x:hidden;
 
 	display:inline-block;
 }
-#postcard{
-	display:block; 
-	max-width:700px; 
+#homewrap{
+
+	background-color:#607D8B;
+
 }
+#middiv{
+background-color:#607D8B;
+min-height:100vh; 
+
+}
+#postcard{
+	margin-left:7%;
+	margin-top:15px; 
+	max-height:100vh;
+	 overflow-y: auto;
+	
+	 
+}
+
+
+
+
+
+#search{
+margin-left:7%; 
+margin-top:15px;
+padding-left:0;
+
+}
+/*
+search bar edit 
+*/
+
+
 .btn-circle.btn-lg {
   width: 50px;
   height: 50px;
@@ -96,7 +126,8 @@ text-align:center;
 
 #rightlist{
 
-	padding-left:60%; 
+	padding-left:25%; 
+	margin-left:2%; 
 }
 #navpp{
 	min-height:40px; 
@@ -118,11 +149,5 @@ text-align:center;
 
 	max-width:80px;
 	max-height:80px;  
-}
-#homewrap{
-
-background-color:#7E8F7C; 
-display: grid;
-
 }
 

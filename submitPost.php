@@ -43,7 +43,7 @@ if (!isset($_SESSION['id'])) {
 								<option value="Floods">Floods</option>
 								<option value="Vehicle_Accident">Vehicle Accident</option>
 								<option value="Earthquark">Earthquark</option>
-								<option value="Gas leak">Gas leak</option>
+								<option value="Gas_leak">Gas leak</option>
 								<option value="Other">other</option>
 
 

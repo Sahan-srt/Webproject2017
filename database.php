@@ -2,7 +2,7 @@
 
 	
 session_start();
-$error='';
+$error=$success=$goback='';
 //login 
 
 if (isset($_POST['login'])) {
@@ -41,11 +41,10 @@ if (isset($_POST['login'])) {
 if (isset($_POST['register'])) {
 	
 
-if (empty($_POST['fullname']) or empty($_POST['registerusername']) or empty($_POST['registerpassword']) or empty($_POST['email']) or empty($_POST['NIC'])or empty($_POST['jobtitle']) or empty($_POST['jobid'])        ) {
+if (empty($_POST['fullname']) or empty($_POST['registerusername']) or empty($_POST['registerpassword']) or empty($_POST['email']) or empty($_POST['NIC'])or empty($_POST['jobtitle']))    {
 	
 
-$error_name='fill the name';$error_username='enter a user name';$error_password='must set a password';$error_email='give us an email';$error_job='add your job title';$error_NIC='Enter NIC';$error_eid='Enter Employee Id';
-
+$error_name='fill the name';$error_username='enter a user name';$error_password='must set a password';$error_email='give us an email';$error_job='add your job title';$error_NIC='Enter NIC';
 
 
 
@@ -61,10 +60,10 @@ $error_name='fill the name';$error_username='enter a user name';$error_password=
 		 $EID=$_POST['jobid'];
 		 $address=$_POST['address'];
 
-$enterregister="INSERT INTO `webproject2017`.`PendingRegistration`(`NIC`,`FullName`,`UserName`,`Password`,`Email`,`JobTitle`,`EmployeeId`,`Address`) VALUES ('$NIC','$name','$uname','$pwd','$email','$title','$EID','$address');";
+$enterregister="INSERT INTO `webproject2017`.`PendingRegistration`(`NIC`,`FullName`,`UserName`,`Password`,`Email`,`JobTitle`,`Address`) VALUES ('$NIC','$name','$uname','$pwd','$email','$title','$address');";
   $connect->query($enterregister);
-
-  header("Location:Home.php");
+$success="Registration request sent.";
+  $goback="<a href='Home.php'>Click to go back Home Page</a>";
 }
 
 
