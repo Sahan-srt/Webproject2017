@@ -24,7 +24,7 @@ if (!isset($_SESSION['id'])) {
 					<td>
 							<div class="card">
 							 <div class="card-header">
-							   <label for="inputTopic">Headline</label>
+							   <label for="inputTopic">Headline:</label><span><? echo $errorH;?></span>
 							    <input type="text" class="form-control" id="inputHeadline" name="pheadline" placeholder="Enter Headline">
 							  </div>
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['id'])) {
 							  <div class="card-body">
 							    
 							    <div class="form-group">
-							    <label for="inputAddress">Reported by:</label>
+							    <label for="inputAddress">Reported by:</label><span><? echo $errorI;?></span>
 							    <input type="text" class="form-control" id="inputID" name="preporter" placeholder="Enter your NIC">
 							  </div>
 
@@ -47,13 +47,13 @@ if (!isset($_SESSION['id'])) {
 								<option value="Other">other</option>
 
 
-							</select>
+							</select><span><? echo $errorT;?></span>
 							    
 							  </div>
 
 
 							 <label for="inputDescription">Description</label>
-							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea><span><? echo $errorD;?></span>
 							  </div>
 
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION['id'])) {
 							  </p>
 							  <h5>Location:</h5>
 
-							   <input id="inputsearch" class="controls" type="text" placeholder="Select the location here:" name="plocation">
+							   <input id="inputsearch" class="controls" type="text" placeholder="Select the location here:" name="plocation"><span><? echo $errorL;?></span>
 
 							<script type="text/javascript">
 								

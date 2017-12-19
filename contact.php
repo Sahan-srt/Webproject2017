@@ -6,7 +6,7 @@
 <div id="middiv" class="row .col-md-* .container-fluid"  >
 
 
-<table class="table table-secondary" >
+<table class="table table-secondary" style="max-width:500px;margin-left:10%;margin-top:20px;    " >
 
 			<form method="POST"> <tbody >
 				<tr>
@@ -16,7 +16,7 @@
 							<div class="card">
 							 <div class="card-header">
 							   <label for="inputTopic">Name</label>
-							    <input type="text" class="form-control" id="inputHeadline" name="cheadline" placeholder="Enter Your Name">
+							    <input type="text" class="form-control" id="inputHeadline" name="cname" placeholder="Enter Your Name">
 							  </div>
 
 							  </div>
@@ -24,7 +24,7 @@
 							    
 							    <div class="form-group">
 							    <label for="inputAddress">Reported by:</label>
-							    <input type="text" class="form-control" id="inputID" name="preporter" placeholder="Enter your NIC">
+							    <input type="text" class="form-control" id="inputID" name="cNIC" placeholder="Enter your NIC">
 							  </div>
 
 							
@@ -32,13 +32,13 @@
 							  </div>
 
 
-							 <label for="inputDescription">Description</label>
-							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea>
+							 <label for="inputDescription">Message</label>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="cmsg"></textarea>
 
 
 
 						
-							<button type="send" name="contact" class="btn btn-primary btn-sm">Send</button><span><? echo $error; ?></span><span><? ?></span>
+							<button type="submit" name="contact" class="btn btn-primary btn-sm">Send</button><span><? echo$contacterror; ?></span><span><? ?></span>
 							
 
 

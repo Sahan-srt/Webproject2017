@@ -23,11 +23,16 @@
   <div class="form-group">
   
     <input type="password" class="form-control"  placeholder="Password" name="registerpassword">
+  </div>
+
+  <div class="form-group">
+  
+    <input type="password" class="form-control"  placeholder="Re-Enter Password" name="Checkregisterpassword">
   </div><span><? echo $error_password ?></span>
 
   <div class="form-group">
   
-     <input type="Email" class="form-control"   placeholder="email" name="email">
+     <input type="email" class="form-control"   placeholder="email" name="email">
     
   </div><span><? echo $error_email ?></span>
 

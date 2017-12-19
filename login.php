@@ -14,7 +14,7 @@
  
     
 
-  <button type="submit" name="login" class="btn btn-primary">Login</button><br> or<br>
+  <button type="submit" name="login" class="btn btn-primary">Login</button><span><?echo $lerror;?></span><br> or<br>
  <a href="register.php">Register</a>
 </form>
 

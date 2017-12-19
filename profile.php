@@ -76,20 +76,24 @@ if (!isset($_SESSION['id'])) {
 
 
 </div>
-<div id="right" class="container">
-						
+<div id="right" class="container" >
+	<?$mail="min";?>
+						<a><img src="images/icons/<? echo $mail;?>.png" style="margin-left:40%; margin-top:15px; margin-bottom: 10px;  "></a>
 							<div  id="ppcard" class="card" style="width: 20rem;">
 					  <img id="pp" class="card-img-top" src="images/profile/<?echo $_SESSION['id'];?>" alt="Card image cap">
-					 	<form method="POST" enctype="multipart/form-data">
+
+
+
+					 	
 
 					  <div class="card-body">
 					    <h4 class="card-title"><?echo $_SESSION['name'];?></h4>
 					    <p class="card-text">some stuff</p>
-					    <input type="file" name="select">
-					    <button name="upload" class="btn btn-primary" type="submit">Upload a photo</button>
+					    <a href="editprofile.php"><button class="btn btn-primary">Edit Bio</button></a>
+					 
 					  </div>
 
-					  </form>
+					  
 					 
 						</div>
 						 <a href="submitPost.php">Submit post</a>
