@@ -9,7 +9,8 @@ if (!isset($_SESSION['id'])) {
 
 ?>
 
-<div id="homewrap" style="min-height:85vh; padding-top:20px;  ">
+<div id="homewrap" style="min-height:85vh; padding-top:20px; 
+ ">
 <div  class="container"  >
 						
 							<form method="POST" enctype="multipart/form-data"><div  id="ppcard" class="card" style="width: 20rem;">

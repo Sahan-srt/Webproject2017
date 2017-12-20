@@ -81,7 +81,7 @@ min-height:100vh;
 
 }
 #postcard{
-	margin-left:1%;
+	margin-left:5%;
 	margin-top:15px; 
 	max-height:100vh;
 	 overflow-y: auto;
@@ -110,7 +110,7 @@ opacity:0.8;
 
 
 #search{
-margin-left:1%; 
+margin-left:5%; 
 margin-top:15px;
 padding-left:0;
 float:left; 
