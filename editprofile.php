@@ -9,8 +9,8 @@ if (!isset($_SESSION['id'])) {
 
 ?>
 
-
-<div  class="container" >
+<div id="homewrap" style="min-height:85vh; padding-top:20px;  ">
+<div  class="container"  >
 						
 							<form method="POST" enctype="multipart/form-data"><div  id="ppcard" class="card" style="width: 20rem;">
 					  <img id="pp" class="card-img-top" src="images/profile/<?echo $_SESSION['id'];?>" alt="Card image cap"> <input type="file" name="select">
@@ -39,19 +39,18 @@ if (!isset($_SESSION['id'])) {
 						
 
 
-
+</div>
 </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
 <?include "footer.php";?>
+
+
+
+
+
+
+
+
+

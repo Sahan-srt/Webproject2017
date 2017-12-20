@@ -8,28 +8,28 @@
        }
     </style>
 <!-- developer.google.com code refereced to this activity -->
-<div class="row .col-md-* .container-fluid" style="background-color:#607D8B;">
+<div id="homewrap" class="row .col-md-* .container-fluid" style="background-color:#607D8B;">
    <div id="map" class=".col-md-6 .container-fluid">
     </div>
-    <div class=".col-md-6 .container-fluid" style="margin-left:20px;" ><h5>Map Help</h5>
+    <div class=".col-md-6 .container-fluid" style="margin-left:20px;" ><h5 style="color: white;">Map Help</h5>
       <ul>
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none; color: white;  ">
           <img src="images/icons/fr.png">Fire
         </li>
 
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none; color: white;  ">
           <img src="images/icons/fl.png">Floods
         </li>
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none;  color: white; ">
           <img src="images/icons/v.png">Vehicle Accidents
         </li>
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none; color: white;  ">
           <img src="images/icons/e.png">Earthquark
         </li>
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none; color: white;  ">
           <img src="images/icons/g.png">Gas leak
         </li>
-        <li style="text-decoration:none;list-style:none;   ">
+        <li style="text-decoration:none;list-style:none;  color: white; ">
           <img src="images/icons/o.png">Other
         </li>
       </ul>

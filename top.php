@@ -19,7 +19,7 @@ include "database.php";
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="leftlist">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navigation">
   <img id="logo" src="images/icons/weblogo.png">
 	  <a class="navbar-brand" href="Home.php">DISASTER AWAREESS 2017</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navitop" aria-controls="navitop" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +31,12 @@ include "database.php";
     
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
      
-      <li class="nav-item active spacelistitm">
-        <a class="nav-link" href="Home.php">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active spacelistitm" >
+        <a  id="navtext" class="nav-link" href="Home.php">Home <span class="sr-only">(current)</span></a>
       </li>
 
        <li class="nav-item spacelistitm">
-        <a class="nav-link " href="map.php">Map View</a>
+        <a id="navtext" class="nav-link " href="map.php">Map View</a>
 
       </li>
 
@@ -44,27 +44,28 @@ include "database.php";
       <li class="nav-item disabled spacelistitm">
         <div class="dropdown show ">
 
-  <a class="nav-link " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a  id="navtext" class="nav-link " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Information
   </a>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="opacity:0.7; 
-  background-color:#607D8B; 
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="opacity:0.8;
+  background-color:#421F00; 
+
   
   ">
-    <a class="dropdown-item" href="infor.php#Fire">Fire</a>
-    <a class="dropdown-item" href="infor.php#Floods">Floods</a>
-    <a class="dropdown-item" href="infor.php#Earthquark">Earthquark</a>
-    <a class="dropdown-item" href="infor.php#Vehicle_Accidents">Vehicle_Accidents</a>
-    <a class="dropdown-item" href="infor.php#Gas_leak">Gas_leak</a>
-    <a class="dropdown-item" href="infor.php#Other">Other</a>
+    <a  class="dropdown-item ditem" href="infor.php#Fire">Fire</a>
+    <a class="dropdown-item ditem" href="infor.php#Floods">Floods</a>
+    <a class="dropdown-item ditem" href="infor.php#Earthquark">Earthquark</a>
+    <a class="dropdown-item ditem" href="infor.php#Vehicle_Accidents">Vehicle_Accidents</a>
+    <a class="dropdown-item ditem" href="infor.php#Gas_leak">Gas_leak</a>
+    <a class="dropdown-item ditem" href="infor.php#Other">Other</a>
   </div>
 </div>
 </li>
         
       
       <li class="nav-item  spacelistitm">
-        <a class="nav-link" href="contact.php">Contact us <span class="sr-only">(current)</span></a>
+        <a id="navtext" class="nav-link " href="contact.php">Contact us <span class="sr-only">(current)</span></a>
       </li>
     
 </ul>
@@ -81,13 +82,13 @@ include "database.php";
       echo' <li class="nav-item spacelistitm">
 
 
-        <a class="nav-link disabled" href="Admin.php">'.$_SESSION['name'].'</a>
+        <a  id="navtext" class="nav-link " href="Admin.php">'.$_SESSION['name'].'</a>
 
       </li>';
 
     }else{
 
-   echo' <li class="nav-item "><a class="nav-link disabled" href="profile.php">
+   echo' <li class="nav-item "><a id="navtext" class="nav-link " href="profile.php">
         <img id="navpp" class="card-img-top" src="images/profile/'. $_SESSION['id'].'"'.'>
 
          </a>
@@ -98,7 +99,7 @@ include "database.php";
         echo' <li class="nav-item spacelistitm">
         
 
-        <a class="nav-link disabled" href="profile.php">'.$_SESSION['name'].'</a>
+        <a id="navtext" class="nav-link " href="profile.php">'.$_SESSION['name'].'</a>
 
       </li>';
 
@@ -106,7 +107,7 @@ include "database.php";
      
     
   echo' <li class="nav-item spacelistitm" id="logout">
-        <a class="nav-link disabled" href="logout.php">'.'logout'.'</a>
+        <a id="navtext" class="nav-link " href="logout.php">'.'logout'.'</a>
 
       </li>';
 
@@ -117,12 +118,12 @@ include "database.php";
 
 
       echo' <li class="nav-item spacelistitm">
-        <a class="nav-link disabled" href="login.php">'."Login".'</a>
+        <a id="navtext" class="nav-link " href="login.php">'."Login".'</a>
 
       </li>';
 
     echo' <li class="nav-item spacelistitm">
-        <a class="nav-link disabled" href="register.php">'."Register".'</a>
+        <a id="navtext" class="nav-link " href="register.php">'."Register".'</a>
 
       </li>';
 

@@ -45,6 +45,7 @@ border:solid black 3px;
 display: -webkit-box;
 -webkit-box-orient:horizontal;
  min-height:95vh; 
+ background-image:url(images/BG/home3.jpg); 
 }
 #right{
 -webkit-box-flex:1;
@@ -69,7 +70,9 @@ overflow-x:hidden;
 }
 #homewrap{
 
-	background-color:#607D8B;
+	background-image:url("images/BG/home3.jpg"); 
+	background-repeat:no-repeat;
+	background-size:100% 100%; 
 
 }
 #middiv{
@@ -78,22 +81,39 @@ min-height:100vh;
 
 }
 #postcard{
-	margin-left:7%;
+	margin-left:1%;
 	margin-top:15px; 
 	max-height:100vh;
 	 overflow-y: auto;
+	 float: right;
+	 margin-right:0px; 
+
 	
 	 
 }
+#cardstyle{
+	
+	color: white;
+	 
+background-image:url(images/BG/home3.jpg); 
+ 
+
+	}
+#hometable{
+background-image:url(images/BG/border.jpg); 
+opacity:0.8; 
+
+}	
 
 
 
 
 
 #search{
-margin-left:7%; 
+margin-left:1%; 
 margin-top:15px;
 padding-left:0;
+float:left; 
 
 }
 /*
@@ -134,6 +154,25 @@ text-align:center;
 	max-width:50px;
 	max-height:50px;  
 }
+#navigation{
+	background-image:url("images/BG/nav.jpg");
+
+background-repeat:no-repeat;
+	background-size: 100% 350px; 
+
+
+}
+#navtext{
+	color:white;
+	font-size:16px; 
+	font-weight:bold; 
+	text-shadow:2px 2px black; 
+
+
+
+
+		}
+.ditem{color: white;}		
 .star{
 
 	max-width:20px;
@@ -149,5 +188,11 @@ text-align:center;
 
 	max-width:80px;
 	max-height:80px;  
+}
+#myChart{
+
+
+	 padding-top:10%; 
+
 }
 
