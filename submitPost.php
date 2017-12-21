@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 if (!isset($_SESSION['id'])) {
   
@@ -24,7 +24,7 @@ if (!isset($_SESSION['id'])) {
 					<td>
 							<div class="card">
 							 <div class="card-header">
-							   <label for="inputTopic">Headline:</label><span><? echo $errorH;?></span>
+							   <label for="inputTopic">Headline:</label><span><?php echo $errorH;?></span>
 							    <input type="text" class="form-control" id="inputHeadline" name="pheadline" placeholder="Enter Headline">
 							  </div>
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['id'])) {
 							  <div class="card-body">
 							    
 							    <div class="form-group">
-							    <label for="inputAddress">Reported by:</label><span><? echo $errorI;?></span>
+							    <label for="inputAddress">Reported by:</label><span><?php echo $errorI;?></span>
 							    <input type="text" class="form-control" id="inputID" name="preporter" placeholder="Enter your NIC">
 							  </div>
 
@@ -47,13 +47,13 @@ if (!isset($_SESSION['id'])) {
 								<option value="Other">other</option>
 
 
-							</select><span><? echo $errorT;?></span>
+							</select><span><?php echo $errorT;?></span>
 							    
 							  </div>
 
 
 							 <label for="inputDescription">Description</label>
-							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea><span><? echo $errorD;?></span>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pdescription"></textarea><span><?php echo $errorD;?></span>
 							  </div>
 
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION['id'])) {
 							  </p>
 							  <h5>Location:</h5>
 
-							   <input id="inputsearch" class="controls" type="text" placeholder="Select the location here:" name="plocation"><span><? echo $errorL;?></span>
+							   <input id="inputsearch" class="controls" type="text" placeholder="Select the location here:" name="plocation"><span><?php echo $errorL;?></span>
 
 							<script type="text/javascript">
 								
@@ -82,7 +82,7 @@ if (!isset($_SESSION['id'])) {
 
 
 						
-							<button type="submit" name="sendreport" class="btn btn-primary btn-sm">Send report</button><span><? echo $filldetails;?></span><span><? echo $sentdetails;?></span>
+							<button type="submit" name="sendreport" class="btn btn-primary btn-sm">Send report</button><span><?php echo $filldetails;?></span><span><?php echo $sentdetails;?></span>
 							
 
 
@@ -133,4 +133,4 @@ if (!isset($_SESSION['id'])) {
 
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

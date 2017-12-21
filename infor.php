@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 
 ?>
@@ -84,4 +84,4 @@
 </div>
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

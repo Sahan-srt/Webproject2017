@@ -1,7 +1,7 @@
 .middle{
 
 min-height:1080px;
-width:95vw; 
+width:100vw; 
 padding-left:5%; 
 
 }
@@ -73,6 +73,8 @@ overflow-x:hidden;
 	background-image:url("images/BG/home3.jpg"); 
 	background-repeat:no-repeat;
 	background-size:100% 100%; 
+	min-height:85vh;
+	width:100vw;  
 
 }
 #middiv{

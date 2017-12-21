@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 
 ?>
@@ -38,7 +38,7 @@
 
 
 						
-							<button type="submit" name="contact" class="btn btn-primary btn-sm">Send</button><span><? echo$contacterror; ?></span><span><? ?></span>
+							<button type="submit" name="contact" class="btn btn-primary btn-sm">Send</button><span><?php echo$contacterror; ?></span><span><? ?></span>
 							
 
 
@@ -67,4 +67,4 @@
 
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

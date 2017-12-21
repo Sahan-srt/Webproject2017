@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 if (!isset($_SESSION['id'])) {
 	header("Location:login.php");
@@ -47,18 +47,18 @@ if (!isset($_SESSION['id'])) {
 					<td>
 							<div class="card">
 							 <div class="card-header">
-							    <?echo $reportresults['Topic'];?>
+							    <?php echo $reportresults['Topic'];?>
 							  </div>
 							  <div class="card-body">
-							    <h5 class="card-title">Reported by:<?echo $reportresults['ReporterID'];?></h5>
-							  <h5 class="card-title">Type:<?echo $reportresults['Type'];?></h5>
+							    <h5 class="card-title">Reported by:<?php echo $reportresults['ReporterID'];?></h5>
+							  <h5 class="card-title">Type:<?php echo $reportresults['Type'];?></h5>
 							  <p><h4>Description</h4>
-							  	<?echo $reportresults['Description'];?>
+							  	<?php echo $reportresults['Description'];?>
 							
 
 
 							  </p>
-							  <h5>Location:<?echo $reportresults['Location'];?></h5>
+							  <h5>Location:<?php echo $reportresults['Location'];?></h5>
 							 
 							  
 							  
@@ -68,7 +68,7 @@ if (!isset($_SESSION['id'])) {
 
 
 							<form method="POST" >
-								<input type="hidden" name='RID' value="<?echo $reportid;?>">
+								<input type="hidden" name='RID' value="<?php echo $reportid;?>">
 								<label>Select Threat level</label>
 								<select name="rating" >
 								<option value=""></option>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['id'])) {
 							<button type="submit" class="btn btn-primary btn-sm" name="reportaccept">Accept</button>
 							<button type="submit" class="btn btn-primary btn-sm" name="reportreject">Reject
 							<button type="submit" class="btn btn-primary btn-sm">Edit</button>
-							<span><?echo $error;?></span>
+							<span><?php echo $error;?></span>
 
 							</form>
 
@@ -94,7 +94,7 @@ if (!isset($_SESSION['id'])) {
 				
 			</tr>
 		</tbody>
-		<? }?>
+		<?php  }?>
 
 	</table>
 
@@ -129,13 +129,13 @@ if (!isset($_SESSION['id'])) {
 							
 							  </div>
 							  <div class="card-body">
-							    <h5 class="card-title">Full Name:<? echo $rowresults['FullName'] ?></h5>
-							  <h5 class="card-title">Occupation:<? echo $rowresults['JobTitle'] ?></h5>
-							  <h5 class="card-title">NIC:<? echo $rowresults['NIC'] ?></h5>
-							  <h5 class="card-title">Post ID/Employee ID:<? echo $rowresults['EmployeeId'] ?></h5>
-							  <h5 class="card-title">Email:<? echo $rowresults['Email'] ?></h5>
+							    <h5 class="card-title">Full Name:<?php  echo $rowresults['FullName'] ?></h5>
+							  <h5 class="card-title">Occupation:<?php echo $rowresults['JobTitle'] ?></h5>
+							  <h5 class="card-title">NIC:<?php  echo $rowresults['NIC'] ?></h5>
+							  <h5 class="card-title">Post ID/Employee ID:<?php echo $rowresults['EmployeeId'] ?></h5>
+							  <h5 class="card-title">Email:<?php echo $rowresults['Email'] ?></h5>
 							  
-							  <h5 class="card-title">Address:<? echo $rowresults['Address'] ?></h5>
+							  <h5 class="card-title">Address:<?php echo $rowresults['Address'] ?></h5>
 							  
 							  
 							  
@@ -145,7 +145,7 @@ if (!isset($_SESSION['id'])) {
 
 
 							<form method="POST">
-								<input type="hidden" name="NIC" value="<? echo $registrationid;?>" >
+								<input type="hidden" name="NIC" value="<?php  echo $registrationid;?>" >
 							<button type="submit" class="btn btn-primary btn-sm" name="Accept">Accept
 							<button type="submit" class="btn btn-primary btn-sm" name="Reject">Reject
 						</form>
@@ -169,7 +169,7 @@ if (!isset($_SESSION['id'])) {
 
 
 	</table>
-	<?}?>	
+	<?php }?>	
 
 
 	</div>
@@ -179,4 +179,4 @@ if (!isset($_SESSION['id'])) {
 </div>
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>
