@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 
 ?>
@@ -52,7 +52,7 @@
 					    
 
 					 <canvas id="myChart" ></canvas>
-					 <?
+					 <?php
 					$fire="SELECT Type FROM ApprovedReport WHERE Type='Fire' ";
 					$fireQuery=mysqli_query($connect,$fire);
 
@@ -182,18 +182,18 @@
 					<td>	<form method="POST">
 							<div id="cardstyle" class="card">
 							 <div class="card-header"><h3 style="font-weight:bold; ">
-							    <?echo $createarray['Topic'];?></h3>
+							    <?php echo $createarray['Topic'];?></h3>
 							  </div>
 
 
 							  <div id="body1">
 
 							  <div id="cardmiddle" class="card-body">
-							    <h5 class="card-title">Reported by:<?echo $name; ?></h5>
-							  <h5 class="card-title">Type:<?echo $createarray['Type']; ?></h5>
+							    <h5 class="card-title">Reported by:<?php echo $name; ?></h5>
+							  <h5 class="card-title">Type:<?php echo $createarray['Type']; ?></h5>
 							  <label>Threat level:</label>
 							  
-							  <?
+							  <?php
 
 							  if (isset($_POST['adminedit']) and $_POST['RID']==$reportid) {
 
@@ -267,13 +267,13 @@
 
 							  <p><h4>Description:</h4>
 
-							  	<?echo $createarray['Description']; ?>
+							  	<?php echo $createarray['Description']; ?>
 
 							  </p>
-							  <h5>Location:<?echo $createarray['Location']; ?></h5></div>
+							  <h5>Location:<?php echo $createarray['Location']; ?></h5></div>
 
 							  <div id="frame">
-							  <iframe width="70%" src="https://www.google.com/maps/embed/v1/place?q=<?echo $createarray['Location']; ?>
+							  <iframe width="70%" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $createarray['Location']; ?>
 						      &zoom=15
 						      &key= AIzaSyDiBdV4rnRhdnlRUxfEK49A-KZDQL8swyQ ">
 						  </iframe></div>
@@ -285,8 +285,8 @@
 
 
 						
-								<input type="hidden" name='RID' value="<?echo $reportid;?>">
-							<?
+								<input type="hidden" name='RID' value="<?php echo $reportid;?>">
+							<?php
 							if (isset($_SESSION['id']) and$_SESSION['name']=="W.M.S.R.Thathsara") {
 								 
 								echo ' <button type="submit" class="btn btn-primary btn-sm" name="homepostdelete">Delete';
@@ -315,7 +315,7 @@
 
 	 </table>
 
-	 <? } ?>
+	 <?php } ?>
     </div>
 
 	
@@ -330,4 +330,4 @@
 </div>
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

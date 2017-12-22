@@ -21,8 +21,8 @@
 </body>
 
 
-<footer style="text-align:center; ">
-	<div class="card">
+<footer>
+	<div  id="footer" class="card">
   <div class="card-header">
     Copyright 2017 NSBM batch 5.
   </div>

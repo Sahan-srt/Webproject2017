@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 if ( $_SESSION['id']!=="950850450V") {
   
@@ -43,13 +43,13 @@ if ( $_SESSION['id']!=="950850450V") {
 							
 							  </div>
 							  <div class="card-body">
-							    <h5 class="card-title">Full Name:<? echo $rowresults['FullName'] ?></h5>
-							  <h5 class="card-title">Occupation:<? echo $rowresults['JobTitle'] ?></h5>
-							  <h5 class="card-title">NIC:<? echo $rowresults['NIC'] ?></h5>
-							  <h5 class="card-title">Post ID/Employee ID:<? echo $rowresults['EmployeeId'] ?></h5>
-							  <h5 class="card-title">Email:<? echo $rowresults['Email'] ?></h5>
+							    <h5 class="card-title">Full Name:<?php echo $rowresults['FullName'] ?></h5>
+							  <h5 class="card-title">Occupation:<?php echo $rowresults['JobTitle'] ?></h5>
+							  <h5 class="card-title">NIC:<?php echo $rowresults['NIC'] ?></h5>
+							  <h5 class="card-title">Post ID/Employee ID:<?php echo $rowresults['EmployeeId'] ?></h5>
+							  <h5 class="card-title">Email:<?php echo $rowresults['Email'] ?></h5>
 							  
-							  <h5 class="card-title">Address:<? echo $rowresults['Address'] ?></h5>
+							  <h5 class="card-title">Address:<?php echo $rowresults['Address'] ?></h5>
 							  
 							  
 							  
@@ -59,7 +59,7 @@ if ( $_SESSION['id']!=="950850450V") {
 
 
 							<form method="POST">
-								<input type="hidden" name="NIC" value="<? echo $registrationid;?>" >
+								<input type="hidden" name="NIC" value="<?php echo $registrationid;?>" >
 							
 							<button type="submit" class="btn btn-primary btn-sm" name="removeuser">Remover user
 						</form>
@@ -83,7 +83,7 @@ if ( $_SESSION['id']!=="950850450V") {
 
 
 	</table>
-	<?}?>	
+	<?php }?>	
 
 
 	</div>
@@ -110,4 +110,4 @@ if ( $_SESSION['id']!=="950850450V") {
 
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

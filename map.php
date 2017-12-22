@@ -1,4 +1,4 @@
-<?include "top.php";?>
+<?php include "top.php";?>
 
   <style>
        #map {
@@ -60,7 +60,7 @@
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 
-<?               
+<?php               
           $getlocation="SELECT * FROM ApprovedReport";
           $setloc=mysqli_query($connect,$getlocation);
           $count=mysqli_num_rows($setloc);
@@ -123,6 +123,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9TxZ7rc4_aDMwr0FyRMTMGulFVevWqOg&callback=createmap">
     </script>
-<?include "footer.php";?>
+<?php include "footer.php";?>
 
 

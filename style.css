@@ -1,7 +1,7 @@
 .middle{
 
 min-height:1080px;
-width:95vw; 
+width:100vw; 
 padding-left:5%; 
 
 }
@@ -73,6 +73,8 @@ overflow-x:hidden;
 	background-image:url("images/BG/home3.jpg"); 
 	background-repeat:no-repeat;
 	background-size:100% 100%; 
+	min-height:90vh;
+	width:100vw;  
 
 }
 #middiv{
@@ -81,7 +83,7 @@ min-height:100vh;
 
 }
 #postcard{
-	margin-left:1%;
+	margin-left:5%;
 	margin-top:15px; 
 	max-height:100vh;
 	 overflow-y: auto;
@@ -96,7 +98,7 @@ min-height:100vh;
 	color: white;
 	 
 background-image:url(images/BG/home3.jpg); 
- 
+ opacity:0.5; 
 
 	}
 #hometable{
@@ -110,10 +112,15 @@ opacity:0.8;
 
 
 #search{
-margin-left:1%; 
+margin-left:5%; 
 margin-top:15px;
 padding-left:0;
 float:left; 
+background-image:url(images/BG/home3.jpg); 
+
+ max-height:555px; 
+ border:1px solid black; 
+
 
 }
 /*
@@ -194,5 +201,11 @@ background-repeat:no-repeat;
 
 	 padding-top:10%; 
 
+
+}
+#footer{
+	background-image:url("images/BG/nav.jpg");
+	text-align:center;
+	color:white;
 }
 

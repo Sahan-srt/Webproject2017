@@ -1,4 +1,4 @@
-<?include "top.php";
+<?php include "top.php";
 
 if (!isset($_SESSION['id'])) {
   
@@ -36,18 +36,18 @@ if (!isset($_SESSION['id'])) {
 					<td>
 							<div class="card">
 							 <div class="card-header">
-							    <?echo $reportresults['Topic'];?>
+							    <?php echo $reportresults['Topic'];?>
 							  </div>
 							  <div class="card-body">
-							    <h5 class="card-title">Reported by:<?echo $reportresults['ReporterID'];?></h5>
-							  <h5 class="card-title">Type:<?echo $reportresults['Type'];?></h5>
+							    <h5 class="card-title">Reported by:<?php echo $reportresults['ReporterID'];?></h5>
+							  <h5 class="card-title">Type:<?php echo $reportresults['Type'];?></h5>
 							  <p><h4>Description</h4>
-							  	<?echo $reportresults['Description'];?>
+							  	<?php echo $reportresults['Description'];?>
 							
 
 
 							  </p>
-							  <h5>Location:<?echo $reportresults['Location'];?></h5>
+							  <h5>Location:<?php echo $reportresults['Location'];?></h5>
 							 
 							  
 							  
@@ -64,7 +64,7 @@ if (!isset($_SESSION['id'])) {
 				
 			</tr>
 		</tbody>
-		<? }?>
+		<?php }?>
 
 	</table>
 
@@ -77,17 +77,17 @@ if (!isset($_SESSION['id'])) {
 
 </div>
 <div id="right" class="container" >
-	<?$mail="min";?>
-						<a><img src="images/icons/<? echo $mail;?>.png" style="margin-left:40%; margin-top:15px; margin-bottom: 10px;  "></a>
+	<?php $mail="min";?>
+						<a><img src="images/icons/<?php echo $mail;?>.png" style="margin-left:40%; margin-top:15px; margin-bottom: 10px;  "></a>
 							<div  id="ppcard" class="card" style="width: 20rem;">
-					  <img id="pp" class="card-img-top" src="images/profile/<?echo $_SESSION['id'];?>" alt="Card image cap">
+					  <img id="pp" class="card-img-top" src="images/profile/<?php echo $_SESSION['id'];?>" alt="Card image cap">
 
 
 
 					 	
 
 					  <div class="card-body">
-					    <h4 class="card-title"><?echo $_SESSION['name'];?></h4>
+					    <h4 class="card-title"><?php echo $_SESSION['name'];?></h4>
 					    <p class="card-text">some stuff</p>
 					    <a href="editprofile.php"><button class="btn btn-primary">Edit Bio</button></a>
 					 
@@ -115,4 +115,4 @@ if (!isset($_SESSION['id'])) {
 
 
 
-<?include "footer.php";?>
+<?php include "footer.php";?>

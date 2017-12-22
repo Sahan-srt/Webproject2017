@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 20, 2017 at 09:14 PM
+-- Generation Time: Dec 22, 2017 at 01:41 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -47,7 +47,8 @@ CREATE TABLE `ApprovedRegistration` (
 
 INSERT INTO `ApprovedRegistration` (`NIC`, `FullName`, `Age`, `Address`, `Email`, `Telephone`, `UserName`, `Password`, `JobTitle`, `EmployeeId`) VALUES
 ('458679812V', 'Zimba', 0, 'no way', 'zimba@gmail.com', 0, 'zimba123', 'p123', 'yet to come', '1265'),
-('950850450V', 'W.M.S.R.Thathsara', 22, 'Sanasuma 18 mile post mapakadawawa', 'srt.sahan@gmail.com', 774807508, 'sahan123', 'p123', 'Jobless', '10602106');
+('950850450V', 'W.M.S.R.Thathsara', 22, 'Sanasuma 18 mile post mapakadawawa', 'srt.sahan@gmail.com', 774807508, 'sahan123', 'p123', 'Jobless', '10602106'),
+('956867894V', 'Dahana', 0, 'sds', 'dduranga4@gmail.com', 0, 'dana123', 'p123', 'student', '');
 
 -- --------------------------------------------------------
 
@@ -70,10 +71,7 @@ CREATE TABLE `ApprovedReport` (
 --
 
 INSERT INTO `ApprovedReport` (`RID`, `ReporterID`, `Type`, `Description`, `Topic`, `Location`, `Rating`) VALUES
-(1, '458679812V', 'Fire', 'gini gatta', 'Fire at townhall', 'Town Hall, Colombo, Western Province, Sri Lanka', 4),
-(2, '950850450V', 'Floods', 'More floods', 'Flooding in Kottawa', 'Kottawa Town, Pannipitiya, Western Province, Sri Lanka', 2),
-(4, '458679812V', 'Gas_leak', 'sdsds', 'Gas leak at Havilock City', 'Havelock City, Colombo, Western Province, Sri Lanka', 2),
-(5, '950850450V', 'Fire', 'sdsdsd', 'fire ', 'homagama town bus stand', 1);
+(1, '950850450V', 'Fire', 'Fire fire fire fire .....lol run then', 'Fire at townhall', 'Town Hall, Colombo, Western Province, Sri Lanka', 5);
 
 -- --------------------------------------------------------
 
@@ -169,7 +167,7 @@ ALTER TABLE `PendingReport`
 -- AUTO_INCREMENT for table `ApprovedReport`
 --
 ALTER TABLE `ApprovedReport`
-  MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `RID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `PendingReport`
 --
